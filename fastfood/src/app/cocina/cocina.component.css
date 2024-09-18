@@ -1,0 +1,9 @@
+li {
+  font-size: large;
+}
+
+.cocina {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding-left: 20px    ;
+}

@@ -1,5 +1,23 @@
-<h2>Cocina</h2>
-<li>
-    <ul>a</ul>
-    <ul>b</ul>
-</li>
+<div class="cocina">
+  <h2>Cocina</h2>
+  <h3>Pedidos a cocinar</h3>
+  <ul>
+    @if (pedidos.pedidosIngresados.length==0) {
+      <span style="color: gray;"> (vacio)</span> 
+    }
+    @for (pedido of pedidos.pedidosIngresados; track $index) {
+    <li>
+      <b>Pedido numero {{ pedido.numero }}:</b> {{ pedido.pedido }} para
+      <b> {{ pedido.nombre }} </b>
+      <button (click)="Cocinar()">Cocinar</button>
+    </li>
+    }
+  </ul>
+
+  <h3>Pedidos en cocina</h3>
+  <ul>
+    @if (pedidos.pedidosIngresados.length==0) {
+        <span style="color: gray;"> En espera...</span> 
+      }
+  </ul>
+</div>

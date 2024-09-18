@@ -8,7 +8,7 @@ export class PedidosService {
 
   constructor() { }
 
-private pedidosIngresados : Pedido[] = []
+public pedidosIngresados : Pedido[] = []
 
   obtenerPedido(p:Pedido){
     p.numero = this.pedidosIngresados.length+1;
