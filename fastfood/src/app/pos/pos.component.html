@@ -1,0 +1,16 @@
+<div class="pos container">
+  <h2>Punto de Servicio</h2>
+  <div class="form">
+    <form (ngSubmit)="Confirmar(form)" #form="ngForm">
+      <div class="row">
+        <label for="nombre">Ingrese nombre </label>
+        <input type="text" name="nombre" id="nombre" ngModel="nombre" placeholder="Ingrese su nombre"  />
+      </div>
+      <div class="row">
+        <label for="pedido">Ingrese pedido </label>
+        <input type="text" id="pedido" name="pedido" ngModel="pedido" placeholder="Ingrese su pedido"  />
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
