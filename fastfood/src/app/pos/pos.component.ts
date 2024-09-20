@@ -12,7 +12,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class PosComponent {
   constructor(private pedidos: PedidosService) {}
-
+  
   Confirmar(form : NgForm) {
     this.pedidos.obtenerPedido(form.value);
     form.reset();

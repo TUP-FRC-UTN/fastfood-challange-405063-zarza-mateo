@@ -9,15 +9,25 @@
     <li>
       <b>Pedido numero {{ pedido.numero }}:</b> {{ pedido.pedido }} para
       <b> {{ pedido.nombre }} </b>
-      <button (click)="Cocinar()">Cocinar</button>
+      <button (click)="Cocinar(pedido, $index)" [disabled]="pedidos.pedidosCocinando.length==1">Cocinar</button>
+
+   
+
     </li>
     }
   </ul>
 
   <h3>Pedidos en cocina</h3>
   <ul>
-    @if (pedidos.pedidosIngresados.length==0) {
+    @if (pedidos.pedidosCocinando.length==0) {
         <span style="color: gray;"> En espera...</span> 
+      }
+      @else {
+        <li>
+         ({{pedidos.pedidosCocinando[0].numero}}) {{pedidos.pedidosCocinando[0].pedido}}
+          <button (click)="Enviar()">Terminar pedido</button>
+
+        </li>
       }
   </ul>
 </div>

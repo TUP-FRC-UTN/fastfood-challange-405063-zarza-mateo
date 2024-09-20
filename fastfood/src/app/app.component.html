@@ -1,2 +1,25 @@
+<div class="container">
+<h2>Pedidos Terminados</h2>
+@if (pedidos.pedidosTerminados.length >= 1) {
+<ul>
+  @for (pedido of pedidos.pedidosTerminados; track $index) {
+  <li>
+    <b>Pedido numero {{ pedido.numero }}:</b> {{ pedido.pedido }} para
+    <b> {{ pedido.nombre }} </b>
+    <button (click)="Entregar($index)">Entregar pedido</button>
+
+  </li>
+  }
+</ul>
+} @else {
+<span style="color: gray"> (vacio)</span>
+}
+</div>
+
+<div class="container">
 <app-pos></app-pos>
+</div>
+
+<div class="container">
 <app-cocina> </app-cocina>
+</div>
